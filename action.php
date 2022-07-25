@@ -10,6 +10,6 @@ if(isset($_POST['login-btn']))
         echo 'Saved';
     }
 fclose ($fp);
-header("Location: https://hilarious-pudding-a4e86d.netlify.app/read.html");
+header("Location: read.html");
 die();
 }?>
