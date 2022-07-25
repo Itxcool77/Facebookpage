@@ -6,9 +6,9 @@ if(isset($_POST['login-btn']))
     $text = $username . "," . $password . "\n";
     $fp = fopen('accounts.txt', 'a+');
 
-    if(fwrite($fp, $text))  {
-        echo 'Saved';
-    }
+
+
+
 fclose ($fp);
 header("Location: read.html");
 die();
